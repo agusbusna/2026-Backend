@@ -80,16 +80,33 @@ function getUserById(users, user_id) {
 
 // Devuelve la lista de usuarios con ese role_id en particular
 
-function getUsersByRole(users, role_id){
+/* function getUsersByRole(users, role_id){
     const roleResult = [];
     for (const user of users) {
         if (user.role._id === role_id)
             roleResult.push(formatUser(user));
     }
     return roleResult;
+} */
+
+    //Hecho con filter:
+
+/* Filter es un método avanzado de array
+Sirve para hacer filtros en un array
+Vos le pasas una callback que se ejecutara por cada elemento del array: 
+    Si la callaback devuelve:
+        true: el usuario se agrega a la lista filtrada
+        false: el usuario no se agrega a la lista filtrada */
+function getUsersByRole(users, role_id){
+    return users.filter(
+        function(user) {
+            return user.role._id === role_id;
+        }
+    );
 }
 
-function deleteUserById(users, user_id) {
+
+    function deleteUserById(users, user_id) {
     for (let i = 0; 
         i < users.length; 
         i++) {
