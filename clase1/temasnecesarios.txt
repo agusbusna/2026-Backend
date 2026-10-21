@@ -1,0 +1,18 @@
+
+JS: 
+    -variables
+    -Operaciones aritméticas
+    -Operadores lógicos
+    -Comparadores
+    -funciones
+    -Objetos y arrays
+    -Bucles (for of, for)
+    -Callbacks (al menos como usarlas)
+    -Desestructuracion
+    -Spread operator (...) (Nos permite clonar)
+
+Recomendados que los vean (pero que se vean en la cursada):
+    - try catch
+    - async / await
+    - class, metodos y herencia (lo vemos en la proxima clase)
+    
