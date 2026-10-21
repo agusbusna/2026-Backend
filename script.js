@@ -7,9 +7,6 @@ let contenido = filesystem.readFileSync("./test.txt")
 
 
 
-
-
-
 const users = [
     {
         _id: 1,
@@ -53,9 +50,6 @@ const users = [
 ]
 
 function formatUser(user){
-    if (!user) {
-        return null;
-    }
     return {
                 user_id: user._id,
                 user_name: user.name,
@@ -84,7 +78,36 @@ function getUserById(users, user_id) {
     return null
 }
 
-console.log (formatUser(users[3]))
+// Devuelve la lista de usuarios con ese role_id en particular
+
+function getUsersByRole(users, role_id){
+    const roleResult = [];
+    for (const user of users) {
+        if (user.role._id === role_id)
+            roleResult.push(formatUser(user));
+    }
+    return roleResult;
+}
+
+function deleteUserById(users, user_id) {
+    for (let i = 0; 
+        i < users.length; 
+        i++) {
+        if (users[i]._id === user_id) {
+            users.splice(i, 1);
+            return true;
+        }
+    }
+
+    return false;
+}
+
+console.log(getUsersByRole(users, 2));
+
+console.log (formatUser(users[1]));
+console.log(deleteUserById(users, 3));
+console.log(deleteUserById(users, 2));
+console.log(users)
 
 /* 
 Dado el array de usuarios desarrollar:
