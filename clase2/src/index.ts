@@ -43,7 +43,7 @@ interface User {
     id: number
 }
 
-let usuario : User = {
+/* let usuario : User = {
     nombre: 'pepe',
     email: 'pepe@gmail.com',
     id: 1
@@ -53,7 +53,7 @@ let usuario_2 : User = {
     nombre: 'jose',
     email: 'jose@gmail.com',
     id: 2
-}
+} */
 
 //arrays
 let nombres: string[] = ['pepe', 'juan', 'jose']
@@ -61,8 +61,8 @@ let notas: number[] = [1, 2, 3]
 let usuarios_en_array: [string, number] = ['pepe', 50]
 
 const usuarios: User[] = [
-    usuario,
-    usuario_2,
+    {nombre: 'pepe', email: 'pepe@gmail.com', id: 10}, 
+    {nombre: 'jose', email: 'jose@gmail.com', id: 41}, 
     {nombre: 'maria', email: 'maria@gmail.com', id: 40}
 ]
 
@@ -112,4 +112,15 @@ function calcularIva (precio_original: number): ResultIva {
     
 }
 
-console.log(calcularIva(300))
+/* console.log(calcularIva(300)) */
+
+function obtenerMails(usuarios:User[]): string[] {
+    const mailList: string[]= [];
+
+    for (const usuario of usuarios) {
+        mailList.push(usuario.email) 
+    } 
+    return mailList
+}
+
+console.log(obtenerMails(usuarios));
