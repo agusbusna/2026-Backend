@@ -78,8 +78,8 @@ class Product {
 }
 
 const product_1 = new Product ('TV Samsung 40', 1, 'Smart TV Android, full HD', 5, 900000)
-const product_2 = new Product ('TV LG 50', 1, 'Smart TV Android, 4k', 2, 1500000)
-const product_3 = new Product ('Heladera Drean', 1, 'No frost, 250lts', 1, 500000)
+const product_2 = new Product ('TV LG 50', 2, 'Smart TV Android, 4k', 2, 1500000)
+const product_3 = new Product ('Heladera Drean', 3, 'No frost, 250lts', 1, 500000)
 /* 
 console.log(product_1)
 
@@ -198,15 +198,22 @@ class Empleado {
 }
 
 const empleado_1 = new Empleado('pepe', 'pepe@gmail.com', 1, 'entry', 'backend', 1000)
+const empleado_2 = new Empleado('jose', 'jose@gmail.com', 2, 'junior', 'front-end', 2000)
+const empleado_3 = new Empleado('maria', 'maria@gmail.com', 3, 'mid', 'backend', 2500)
 
 empleado_1.cobrar()
 empleado_1.cambiarEmail('jose@gmail.com')
 empleado_1.aumentarSeniority()
 
 empleado_1.aumentarSeniority()
+empleado_2.aumentarSeniority()
+empleado_3.aumentarSeniority()
 
-empleado_1.aumentarSeniority()
+
+
 console.log(empleado_1)
+console.log(empleado_2)
+console.log(empleado_3)
 
 console.log(empleado_1.saludar())
 
