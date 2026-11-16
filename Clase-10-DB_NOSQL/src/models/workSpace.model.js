@@ -14,6 +14,7 @@ const espacioTrabajoSchema = new mongoose.Schema({
     }
 })
 
-const EspacioTrabajo = mongoose.model("espaciosTrabajo", espacioTrabajoSchema)
+export const ESPACIOTRABAJO_COLLECTION_NAME = "espaciosTrabajo"
+const EspacioTrabajo = mongoose.model(ESPACIOTRABAJO_COLLECTION_NAME, espacioTrabajoSchema)
 
 export default EspacioTrabajo

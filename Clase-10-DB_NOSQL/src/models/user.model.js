@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const Usuario = mongoose.model("usuarios", userSchema)
+export const USUARIO_COLLECTION_NAME = "usuarios"
+const Usuario = mongoose.model( USUARIO_COLLECTION_NAME, userSchema)
 
 export default Usuario
